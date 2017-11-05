@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Search from "./components/Search";
+import Saved from "./components/Saved";
 
 
 class App extends Component {
@@ -13,7 +14,8 @@ class App extends Component {
           <Navbar />
           <Main>
               <Route exact path ="/" component={Search} />
-              <Route exact path ="/Search" component={Search} />
+              <Route exact path ="/search" component={Search} />
+              <Route exact path ="/saved" component={Saved} />
           </Main>
         </div>
       </Router>
