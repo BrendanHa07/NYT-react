@@ -50,14 +50,16 @@ class Saved extends Component {
                                         <ListItem key={article._id}>
                                             <strong>
                                                 {article.title} {"\n"} {article.url}
-                                                
                                             </strong>
                                             <button className="btn btn-default" onClick={() => this.deleteArticle(article._id)} style={{float: "right"}}>Delete Article</button>
                                         </ListItem>
                                      ))}
                                 </List>
                             ) : (
-                                <p> No Results to Display </p>
+                                <div className="card-body">
+                                    <p> No Results to Display </p>
+                                </div>
+                                
                             )}
                     </div>
                     </Col>
