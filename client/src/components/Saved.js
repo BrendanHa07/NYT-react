@@ -39,17 +39,18 @@ class Saved extends Component {
 
             <Container fluid>
                 <Row>
-                    <Col size="md-12">
-                    <div className="card">
-                        <div className="card-header">
-                            <p>Saved Articles</p>
+                    <Col size="md-12" >
+                    <div className="card" >
+                        <div className="card-header" style={{backgroundColor: "#334b72"}}>
+                            <p style={{color: "#fff", textAlign: "center"}}>Saved Articles</p>
                         </div>
                         {this.state.articles.length ? (
                                 <List>
                                     {this.state.articles.map(article => (
                                         <ListItem key={article._id}>
                                             <strong>
-                                                {article.title}
+                                                {article.title} {"\n"} {article.url}
+                                                
                                             </strong>
                                             <button className="btn btn-default" onClick={() => this.deleteArticle(article._id)} style={{float: "right"}}>Delete Article</button>
                                         </ListItem>

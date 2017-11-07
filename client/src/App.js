@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Search from "./components/Search";
 import Saved from "./components/Saved";
+import Footer from "./components/Footer/Footer";
 
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
               <Route exact path ="/search" component={Search} />
               <Route exact path ="/saved" component={Saved} />
           </Main>
+          <Footer />
         </div>
       </Router>
     );

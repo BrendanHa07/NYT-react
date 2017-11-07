@@ -18,18 +18,18 @@ class Search extends Component {
         end_year: ""
     };
 
-    // Load articles
-    componentDidMount () {
-        this.loadArticles();
-    }
+    // // Load articles
+    // componentDidMount () {
+    //     this.loadArticles();
+    // }
 
-    loadArticles = () => {
-        API.getArticles()
-            .then(res =>
-                this.setState({ articles: res.data, topic: "", start_year: "", end_year: ""})
-            )
-            .catch(err => console.log(err));
-    };
+    // loadArticles = () => {
+    //     API.getArticles()
+    //         .then(res =>
+    //             this.setState({ articles: res.data, topic: "", start_year: "", end_year: ""})
+    //         )
+    //         .catch(err => console.log(err));
+    // };
 
     // handle any changes to input field
     handleInputChange = event => {
@@ -111,8 +111,8 @@ class Search extends Component {
                 <Row>
                 <Col size="md-12">
                 <div className="card" style={{textAlign: "center"}}>
-                    <div className="card-header">
-                        <p>Search Articles</p>
+                    <div className="card-header"  style={{backgroundColor: "#334b72"}}>
+                        <p style={{color: "#fff", textAlign: "center"}}>Search Articles</p>
                     </div>
                     <div className="card-body">
                         <form>
@@ -134,10 +134,10 @@ class Search extends Component {
 
 
                 <Row>
-                    <Col size="md-12">
-                        <div className="card" stye={{textAlign: "center"}}>
-                            <div className="card-header">
-                                <p>Search Results</p>
+                    <Col size="md-12" style={{textAlign: "center"}}>
+                        <div className="card" style={{marginTop: "50px"}}>
+                            <div className="card-header" style={{backgroundColor: "#334b72"}}>
+                                <p style={{color: "#fff", textAlign: "center"}}>Search Results</p>
                             </div>
                             {this.state.articles.length ? (
                                 <List>
@@ -151,7 +151,9 @@ class Search extends Component {
                                   ))}
                                 </List>
                               ) : (
-                                <h3> No Results to Display </h3>
+                                  <div className="card-body">
+                                        <p> No Results to Display</p>
+                                  </div>
                             )}
                         </div>
                     </Col>
