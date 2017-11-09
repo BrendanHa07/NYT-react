@@ -6,7 +6,6 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "./Grid"
 import { Input, FormBtn } from "./Form";
-import Searched from "./Searched";
 
 
 class Search extends Component {
@@ -51,7 +50,7 @@ class Search extends Component {
 
         // API URL with api key
         const apiKey = "e497d9b362d54fbfa57fcc3c48800b95";
-        let queryURL = `http://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${apiKey}&q=${topic}`;
+        let queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${apiKey}&q=${topic}`;
 
          // Appends month/day to startYear
         if (startYear) {
