@@ -67,7 +67,8 @@ class Search extends Component {
         // Get request
         axios.get(queryURL)
            .then( response => {
-            //    console.log(response.data.response.docs);
+               console.log(queryURL);
+               console.log(response.data.response.docs);
                response.data.response.docs.map(function(docs) {
                  var entry = {
                      title: docs.headline.main,
@@ -75,9 +76,7 @@ class Search extends Component {
                      url: docs.web_url,
                      id: docs._id
                  }
-                 console.log(entry);
                  queryResult.push(entry);
-                 console.log(queryResult);
                })
                this.setState({ articles: queryResult});
            })
@@ -143,7 +142,12 @@ class Search extends Component {
                                   {this.state.articles.map(article => (
                                     <ListItem key={article.id}>
                                         <strong>
-                                          {article.title}
+                                            <div>
+                                                {article.title}
+                                            </div>
+                                            <div>
+                                                <Link to={article.url}>{article.url}</Link>
+                                            </div>  
                                         </strong>
                                       <SaveBtn onClick={() => this.saveArticle(article.title, article.date, article.url)} />
                                     </ListItem>

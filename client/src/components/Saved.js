@@ -49,7 +49,12 @@ class Saved extends Component {
                                     {this.state.articles.map(article => (
                                         <ListItem key={article._id}>
                                             <strong>
-                                                {article.title} {"\n"} {article.url}
+                                                <div>
+                                                    {article.title}
+                                                </div>
+                                                <div>
+                                                    <Link to={article.url}>{article.url}</Link>
+                                                 </div>  
                                             </strong>
                                             <button className="btn btn-default" onClick={() => this.deleteArticle(article._id)} style={{float: "right"}}>Delete Article</button>
                                         </ListItem>
