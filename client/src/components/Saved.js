@@ -56,7 +56,7 @@ class Saved extends Component {
                                                      <a href={article.url}>{article.url}</a>
                                                 </div>
                                             </strong>
-                                            <button className="btn btn-default" onClick={() => this.deleteArticle(article._id)} style={{float: "right"}}>Delete Article</button>
+                                            <button className="btn btn-default" onClick={() => this.deleteArticle(article._id)} style={{float: "right"}}>Delete</button>
                                         </ListItem>
                                      ))}
                                 </List>
