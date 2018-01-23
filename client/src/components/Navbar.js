@@ -19,7 +19,7 @@ const Navbar = () => (
     </nav>
 
     <div className="jumbotron">
-        <h2 className="text-center">New York Times Article Srubber</h2>
+        <h2 className="text-center">New York Times Article Scrubber</h2>
         <p className="text-center">Search for and annotate articles of interest!</p>
     </div>
 
